@@ -121,22 +121,23 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,   rotatetags,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-<<<<<<< HEAD
-//	{ MODKEY,                       XK_s,      show,           {0} },
-//	{ MODKEY,                       XK_h,      hide,           {0} },
+    //	{ MODKEY,                       XK_s,      show,           {0} },
+    //	{ MODKEY,                       XK_h,      hide,           {0} },
     // Run Programs
-    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
-    { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
+    /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run brave") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
-    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
+    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("prime-run pcmanfm") },
 
     // Run Scripts
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
     { ControlMask|ShiftMask,        XK_b,      spawn,          SHCMD(". ~/.config/scripts/bluetooth_headphones.sh") },
-=======
-    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
->>>>>>> 70234f3 (add: Added keybinding for the browser used (hardcoded as "firefox"))
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-kill-process.sh --gruvbox") },
+	{ ALTKEY|ControlMask,           XK_space,  spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-emoji.sh --gruvbox") },
+
+    // Tags
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
