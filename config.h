@@ -6,7 +6,7 @@ static const unsigned int gappx     = 5;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12:style=Bold" };
+static const char *fonts[]          = { "monospace:size=12:style=Bold" , "fontawesome:size=12:style=Bold"};
 static const char dmenufont[]       = "monospace:size=11:style=Bold";
 // background color
 static const char col_gray1[]       = "#0A0B11";
@@ -15,7 +15,7 @@ static const char col_gray2[]       = "#14191F";
 // font color
 static const char col_gray3[]       = "#E7C547";
 // current tag and current window font color
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#8C92AC";
 // Top bar second color (blue) and active window border color
 static const char col_cyan[]        = "#E7C547";
 static const char *colors[][3]      = {
@@ -97,6 +97,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
