@@ -800,19 +800,19 @@ drawbar(Monitor *m)
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
 
-	if ((w = m->ww - tw - x) > bh) {
+    if ((w = m->ww - tw - x) > bh) {
 		if (n > 0) {
-			int remainder = w % n;
+			int remainder = (w - 2 * sp)% n;
 			int tabw = (1.0 / (double)n) * w + 1;
 			for (c = m->clients; c; c = c->next) {
 				if (!ISVISIBLE(c))
 					continue;
 				if (m->sel == c)
-					scm = SchemeSel;
+					scm = SchemeInfoSel;
 				else if (HIDDEN(c))
 					scm = SchemeHid;
 				else
-					scm = SchemeNorm;
+					scm = SchemeInfoNorm;
 				drw_setscheme(drw, scheme[scm]);
 
 				if (remainder >= 0) {
