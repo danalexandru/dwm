@@ -98,6 +98,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
+    { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
+    { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
