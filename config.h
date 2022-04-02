@@ -121,6 +121,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,   rotatetags,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+<<<<<<< HEAD
 //	{ MODKEY,                       XK_s,      show,           {0} },
 //	{ MODKEY,                       XK_h,      hide,           {0} },
     // Run Programs
@@ -133,6 +134,9 @@ static Key keys[] = {
     // Run Scripts
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
     { ControlMask|ShiftMask,        XK_b,      spawn,          SHCMD(". ~/.config/scripts/bluetooth_headphones.sh") },
+=======
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
+>>>>>>> 70234f3 (add: Added keybinding for the browser used (hardcoded as "firefox"))
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
