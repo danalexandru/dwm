@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 0;        /* vertical padding for statusbar */
+static const int vertpadbar         = 5;        /* vertical padding for statusbar */
 static const char *fonts[]          = { "monospace:size=12" , "fontawesome:size=10"};
 static const char dmenufont[]       = "monospace:size=11:style=Bold";
 // background color
@@ -100,6 +100,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY,                       XK_Left,   rotatetags,     {.i = -1 } },
+	{ MODKEY,                       XK_Right,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
