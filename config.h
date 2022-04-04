@@ -103,9 +103,14 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Left,   rotatetags,     {.i = -1 } },
 	{ MODKEY,                       XK_Right,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+    // Run Programs
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
+
+    // Run Scripts
+    { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
+    { ControlMask|ShiftMask,        XK_b,      spawn,          SHCMD(". ~/.config/scripts/bluetooth_headphones.sh") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
