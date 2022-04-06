@@ -9,8 +9,12 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
-static const int vertpadbar         = 5;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "monospace:size=12" , "fontawesome:size=10"};
+static const int vertpadbar         = 10;        /* vertical padding for statusbar */
+static const char *fonts[]          = {
+    "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
+    "JoyPixels:pixelsize=14:antialias=true:autohint=true"
+};
+
 static const char dmenufont[]       = "monospace:size=11:style=Bold";
 // background color
 static const char col_gray1[]       = "#0A0B11";
