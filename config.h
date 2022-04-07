@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 0;       /* vertical padding of bar */
 static const int sidepad            = 0;       /* horizontal padding of bar */
-static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
+static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 static const char *fonts[]          = {
     "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
@@ -21,15 +21,15 @@ static const char col_gray1[]       = "#0A0B11";
 // inactive window border color
 static const char col_gray2[]       = "#14191F";
 // font color
-static const char col_gray3[]       = "#E7C547";
+static const char col_gray3[]       = "#F3F3F6";
 // current tag and current window font color
 static const char col_gray4[]       = "#8C92AC";
 // Top bar second color (blue) and active window border color
 static const char col_cyan[]        = "#E7C547";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray2, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray2, col_cyan  },
+	[SchemeNorm] = { col_gray4, col_gray2, col_gray2 },
+	[SchemeSel]  = { col_gray3, col_gray2, col_cyan  },
 }; /* stuff */
 
 /* tagging */
@@ -73,7 +73,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray1, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_cyan, "-sb", col_cyan, "-sf", col_gray1, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
