@@ -147,7 +147,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ ALTKEY,                       XK_F4,      quit,          {0} },
+    { ALTKEY,                       XK_F4,      quit,          {0} },
     { MODKEY|ControlMask,           XK_r,       quit,          {1} },
 
     // Sound
@@ -162,7 +162,6 @@ static Key keys[] = {
     // Shutdown PC
     { ALTKEY,                      XK_Escape,     spawn,          SHCMD("pkill -9 dwm && shutdown now")},
     { ALTKEY|ControlMask,          XK_Escape,     spawn,          SHCMD("pkill -9 dwm && reboot")}
-
 };
 
 /* button definitions */
