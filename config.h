@@ -126,6 +126,17 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ ALTKEY,                       XK_F4,      quit,           {0} },
+
+    // Function Keys
+
+    // Sound
+    { MODKEY,                       XK_F10,     spawn,          SHCMD("pactl set-sink-volume 0 0")},
+    { MODKEY,                       XK_F11,     spawn,          SHCMD("pactl set-sink-volume 0 -5%")},
+    { MODKEY,                       XK_F12,     spawn,          SHCMD("pactl set-sink-volume 0 +5%")},
+
+    // Screen brightness
+    { MODKEY,                       XK_F5,      spawn,          SHCMD("brightnessctl set 10%-")},
+    { MODKEY,                       XK_F6,      spawn,          SHCMD("brightnessctl set 10%+")}
 };
 
 /* button definitions */
