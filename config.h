@@ -44,6 +44,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Galculator", NULL,     NULL,       0,            1,           -1 },
+    { "Firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1 },
 };
 
 /* layout(s) */
@@ -112,6 +113,7 @@ static Key keys[] = {
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
+    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
 
     // Run Scripts
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
