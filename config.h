@@ -43,7 +43,10 @@ static const Rule rules[] = {
 	{ "firefox",  NULL,       NULL,       0,            0,           -1,        0  },
 	{ "Galculator", NULL,     NULL,       0,            1,           -1,        0  },
     { "firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1,        0  },
+    { NULL, NULL, "Picture in picture",   0,            1,           -1,        0  },
+    { "gmic_qt", "gmic_qt", NULL,         0,            1,           -1,         0  },
 	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
+	/* { "PacketTracer", "PacketTracer",   NULL,   0,      1,           -1,       's' }, */
 };
 
 /* layout(s) */
