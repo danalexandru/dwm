@@ -15,6 +15,9 @@ static const char *fonts[]          = {
     "JoyPixels:pixelsize=14:antialias=true:autohint=true"
 };
 
+#define ICONSIZE 16   /* icon size */
+#define ICONSPACING 5 /* space between icon and title */
+
 static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14:style=Bold";
 // background color
 static const char col_gray1[]       = "#0A0B11";
