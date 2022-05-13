@@ -1159,7 +1159,8 @@ manage(Window w, XWindowAttributes *wa)
 		c->isfloating = c->oldstate = trans != None || c->isfixed;
 	if (c->isfloating)
 		XRaiseWindow(dpy, c->win);
-	attachbottom(c);
+	// attachbottom(c);
+    attach(c);
 	attachstack(c);
 	XChangeProperty(dpy, root, netatom[NetClientList], XA_WINDOW, 32, PropModeAppend,
 		(unsigned char *) &(c->win), 1);
@@ -1525,7 +1526,8 @@ sendmon(Client *c, Monitor *m)
 	detachstack(c);
 	c->mon = m;
 	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
-	attachbottom(c);
+	// attachbottom(c);
+    attach(c);
 	attachstack(c);
 	focus(NULL);
 	arrange(NULL);
@@ -2024,43 +2026,33 @@ updategeom(void)
 
 		/* removed monitors if n > nn */
 		for (i = nn; i < n; i++) {
-			for (m = mons; m && m->next; m = m->next);
-			while ((c = m->clients)) {
-				dirty = 1;
-				m->clients = c->next;
-				detachstack(c);
-				c->mon = mons;
-				attach(c);
-				attachstack(c);
-
-	//		for (i = 0, m = mons; i < nn && m; m = m->next, i++)
-	//			if (i >= n
-	//			|| unique[i].x_org != m->mx || unique[i].y_org != m->my
-	//			|| unique[i].width != m->mw || unique[i].height != m->mh)
-	//			{
-	//				dirty = 1;
-	//				m->num = i;
-	//				m->mx = m->wx = unique[i].x_org;
-	//				m->my = m->wy = unique[i].y_org;
-	//				m->mw = m->ww = unique[i].width;
-	//				m->mh = m->wh = unique[i].height;
-	//				updatebarpos(m);
-	//			}
-	//	} else { /* less monitors available nn < n */
-	//		for (i = nn; i < n; i++) {
-	//			for (m = mons; m && m->next; m = m->next);
-	//			while ((c = m->clients)) {
-	//				dirty = 1;
-	//				m->clients = c->next;
-	//				detachstack(c);
-	//				c->mon = mons;
-	//				attachbottom(c);
-	//				attachstack(c);
-	//			}
-	//			if (m == selmon)
-	//				selmon = mons;
-	//			cleanupmon(m);
-
+			for (i = 0, m = mons; i < nn && m; m = m->next, i++)
+				if (i >= n
+				|| unique[i].x_org != m->mx || unique[i].y_org != m->my
+				|| unique[i].width != m->mw || unique[i].height != m->mh)
+				{
+					dirty = 1;
+					m->num = i;
+					m->mx = m->wx = unique[i].x_org;
+					m->my = m->wy = unique[i].y_org;
+					m->mw = m->ww = unique[i].width;
+					m->mh = m->wh = unique[i].height;
+					updatebarpos(m);
+				}
+		} else { /* less monitors available nn < n */
+			for (i = nn; i < n; i++) {
+				for (m = mons; m && m->next; m = m->next);
+				while ((c = m->clients)) {
+					dirty = 1;
+					m->clients = c->next;
+					detachstack(c);
+					c->mon = mons;
+					attachbottom(c);
+					attachstack(c);
+				}
+				if (m == selmon)
+					selmon = mons;
+				cleanupmon(m);
 			}
 			if (m == selmon)
 				selmon = mons;
