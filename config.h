@@ -141,7 +141,12 @@ static Key keys[] = {
 
     // Screen brightness
     { MODKEY,                       XK_F5,      spawn,          SHCMD("brightnessctl set 10%-")},
-    { MODKEY,                       XK_F6,      spawn,          SHCMD("brightnessctl set 10%+")}
+    { MODKEY,                       XK_F6,      spawn,          SHCMD("brightnessctl set 10%+")},
+
+    // Shutdown PC
+    { ALTKEY,                      XK_Escape,     spawn,          SHCMD("shutdown now")},
+    { ALTKEY|ControlMask,          XK_Escape,     spawn,          SHCMD("reboot")}
+
 };
 
 /* button definitions */
