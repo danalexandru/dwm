@@ -75,15 +75,15 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static char dmenuprompt[] = "dmenu run:"; /* prompt to be displayed before input area */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", CurrentColorScheme.Normal.Background, "-nf", CurrentColorScheme.Normal.Foreground, "-sb", CurrentColorScheme.Select.Background, "-sf", CurrentColorScheme.Select.Foreground, "-p", dmenuprompt ,NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", CurrentColorScheme.Normal.Background, "-nf", CurrentColorScheme.Normal.Foreground, "-sb", CurrentColorScheme.Select.Background, "-sf", CurrentColorScheme.Select.Foreground, "-p", dmenuprompt ,NULL };
 
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", "-t", "Simple Terminal", NULL };
 
 /*First arg only serves to match against key in rules*/
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", "-G", "800xX600", NULL};
+
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
