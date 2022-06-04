@@ -84,7 +84,6 @@ static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'",
 /*First arg only serves to match against key in rules*/
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", "-G", "800xX600", NULL};
 
-
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
