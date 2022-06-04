@@ -80,7 +80,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static char dmenuprompt[] = "dmenu run:"; /* prompt to be displayed before input area */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray4, "-sb", col_gray4, "-sf", col_gray2, "-p", dmenuprompt ,NULL };
 // static const char *termcmd[]  = { "st", NULL };
-static const char *termcmd[]  = { "tabbed", "-r", "2", "st", "-w", "\'\'", NULL };
+static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
