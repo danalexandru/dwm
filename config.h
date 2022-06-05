@@ -85,15 +85,13 @@ static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'",
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", "-G", "800xX600", NULL};
 
 static Key keys[] = {
-	/* modifier                     key        function        argument */
+    /* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
-	/* { MODKEY,                       XK_j,      focusstack,     {.i = +1 } }, */
-	/* { MODKEY,                       XK_k,      focusstack,     {.i = -1 } }, */
 	/* { MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } }, */
 	/* { MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } }, */
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -123,8 +121,13 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,   rotatetags,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+<<<<<<< HEAD
     //	{ MODKEY,                       XK_s,      show,           {0} },
     //	{ MODKEY,                       XK_h,      hide,           {0} },
+=======
+	{ MODKEY,                       XK_s,      show,           {0} },
+	{ MODKEY,                       XK_h,      hide,           {0} },
+>>>>>>> b4496bf (add: Added the awesomebar patch)
     // Run Programs
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */

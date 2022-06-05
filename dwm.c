@@ -241,7 +241,6 @@ static void togglescratch(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
 static void togglewin(const Arg *arg);
->>>>>>> 22bd112 (add: Added winicon patch)
 static void freeicon(Client *c);
 static void unfocus(Client *c, int setfocus);
 static void unmanage(Client *c, int destroyed);
@@ -1503,6 +1502,9 @@ quit(const Arg *arg)
 
     if(arg->i) restart = 1;
 	running = 0;
+
+	if (restart == 1)
+		saveSession();
 }
 
 Monitor *
