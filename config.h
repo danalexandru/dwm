@@ -33,6 +33,7 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray2, col_gray2 },
 	[SchemeSel]  = { col_gray3, col_gray1, col_cyan  },
+	[SchemeHid]  = { col_gray4, col_gray2, col_gray2 },
 }; /* stuff */
 
 /* tagging */
@@ -87,8 +88,10 @@ static Key keys[] = {
 	{ ALTKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
+	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ ALTKEY|ShiftMask,             XK_Tab,    inplacerotate,  {.i = +2} },
 	{ ALTKEY,                       XK_Tab,    inplacerotate,  {.i = -2} },
@@ -114,6 +117,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Left,   rotatetags,     {.i = -1 } },
 	{ MODKEY,                       XK_Right,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ MODKEY,                       XK_s,      show,           {0} },
+	{ MODKEY,                       XK_h,      hide,           {0} },
     // Run Programs
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
@@ -157,6 +162,7 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
