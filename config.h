@@ -20,7 +20,7 @@ static const char *fonts[]          = {
 
 static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14:style=Bold";
 // background color
-static const char col_gray1[]       = "#0A0B11";
+static const char col_gray1[]       = "#1F2833";
 // inactive window border color
 static const char col_gray2[]       = "#14191F";
 // font color
@@ -32,7 +32,7 @@ static const char col_cyan[]        = "#E7C547";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray2, col_gray2 },
-	[SchemeSel]  = { col_gray3, col_gray2, col_cyan  },
+	[SchemeSel]  = { col_gray3, col_gray1, col_cyan  },
 }; /* stuff */
 
 /* tagging */
@@ -78,7 +78,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static char dmenuprompt[] = "dmenu run:"; /* prompt to be displayed before input area */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray4, "-sb", col_gray4, "-sf", col_gray2, "-p", dmenuprompt ,NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray4, "-sb", col_gray1, "-sf", col_gray3, "-p", dmenuprompt ,NULL };
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", NULL };
 
