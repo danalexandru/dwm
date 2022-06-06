@@ -121,13 +121,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,   rotatetags,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-<<<<<<< HEAD
     //	{ MODKEY,                       XK_s,      show,           {0} },
     //	{ MODKEY,                       XK_h,      hide,           {0} },
-=======
-	{ MODKEY,                       XK_s,      show,           {0} },
-	{ MODKEY,                       XK_h,      hide,           {0} },
->>>>>>> b4496bf (add: Added the awesomebar patch)
+    //
     // Run Programs
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
