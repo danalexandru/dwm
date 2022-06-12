@@ -116,6 +116,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY,                       XK_Left,   rotatetags,     {.i = -1 } },
 	{ MODKEY,                       XK_Right,  rotatetags,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_h,   rotatetags,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_l,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 //	{ MODKEY,                       XK_s,      show,           {0} },
 //	{ MODKEY,                       XK_h,      hide,           {0} },
