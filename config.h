@@ -123,6 +123,7 @@ static Key keys[] = {
 //	{ MODKEY,                       XK_h,      hide,           {0} },
     // Run Programs
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
+    { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
