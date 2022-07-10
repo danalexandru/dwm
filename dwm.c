@@ -1821,6 +1821,9 @@ setup(void)
 	signal(SIGHUP, sighup);
 	signal(SIGTERM, sigterm);
 
+	signal(SIGHUP, sighup);
+	signal(SIGTERM, sigterm);
+
 	/* init screen */
 	screen = DefaultScreen(dpy);
 	sw = DisplayWidth(dpy, screen);
