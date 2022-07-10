@@ -28,7 +28,8 @@ static const char col_gray3[]       = "#F3F3F6";
 // current tag and current window font color
 static const char col_gray4[]       = "#8C92AC";
 // Top bar second color (blue) and active window border color
-static const char col_cyan[]        = "#E7C547";
+// static const char col_cyan[]        = "#E7C547";
+static const char col_cyan[]        = "#0087ff";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray2, col_gray2 },
@@ -140,9 +141,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ ALTKEY,                       XK_F4,      quit,           {0} },
-
-    // Function Keys
+	{ ALTKEY,                       XK_F4,      quit,          {0} },
+    { MODKEY|ControlMask,           XK_r,       quit,          {1} },
 
     // Sound
     { MODKEY,                       XK_F10,     spawn,          SHCMD("pactl set-sink-volume 0 0")},
