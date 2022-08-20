@@ -159,8 +159,8 @@ static Key keys[] = {
     { MODKEY,                       XK_F6,      spawn,          SHCMD("brightnessctl set 10%+")},
 
     // Shutdown PC
-    { ALTKEY,                      XK_Escape,     spawn,          SHCMD("shutdown now")},
-    { ALTKEY|ControlMask,          XK_Escape,     spawn,          SHCMD("reboot")}
+    { ALTKEY,                      XK_Escape,     spawn,          SHCMD("pkill -9 dwm && shutdown now")},
+    { ALTKEY|ControlMask,          XK_Escape,     spawn,          SHCMD("pkill -9 dwm && reboot")}
 
 };
 
