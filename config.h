@@ -45,11 +45,12 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            0,           -1 },
-	{ "firefox",  NULL,       NULL,       0,            0,           -1 },
-	{ "Galculator", NULL,     NULL,       0,            1,           -1 },
-    { "firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1 },
+	/* class      instance    title       tags mask     isfloating   monitor    scratch key */
+	{ "Gimp",     NULL,       NULL,       0,            0,           -1,        0  },
+	{ "firefox",  NULL,       NULL,       0,            0,           -1,        0  },
+	{ "Galculator", NULL,     NULL,       0,            1,           -1,        0  },
+    { "firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1,        0  },
+	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
 };
 
 /* layout(s) */
@@ -84,10 +85,14 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", "-t", "Simple Terminal", NULL };
 
+/*First arg only serves to match against key in rules*/
+static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", NULL}; 
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
@@ -99,7 +104,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
+	/* { MODKEY|ShiftMask,             XK_Return, zoom,           {0} }, */
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ ControlMask,                  XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
