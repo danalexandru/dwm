@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include "colorschemes.h"
+
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 7;        /* gap pixel between windows */
@@ -32,9 +34,9 @@ static const char col_gray4[]       = "#8C92AC";
 static const char col_cyan[]        = "#0087ff";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray4, col_gray2, col_gray2 },
-	[SchemeSel]  = { col_gray3, col_gray1, col_cyan  },
-	[SchemeHid]  = { col_gray4, col_gray2, col_gray2 },
+	[SchemeNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
+	[SchemeSel]  = { CurrentColorScheme.Select.Foreground, CurrentColorScheme.Select.Background, CurrentColorScheme.Select.Border },
+	[SchemeHid]  = { CurrentColorScheme.Hide.Foreground, CurrentColorScheme.Hide.Background, CurrentColorScheme.Hide.Border },
 }; /* stuff */
 
 /* tagging */
