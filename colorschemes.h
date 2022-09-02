@@ -55,8 +55,26 @@ const ColorScheme DoomOne = {
     }
 };
 
+const ColorScheme MatchaDark = {
+    .Normal = {
+        .Background = "#141a1b",
+        .Foreground = "#6c8782",
+        .Border = "#141a1b",
+    },
+    .Select = {
+        .Background = "#263034",
+        .Foreground = "#F3F3F6",
+        .Border = "#16a085",
+    },
+    .Hide = {
+        .Background = "#141a1b",
+        .Foreground = "#6c8782",
+        .Border = "#141a1b",
+    }
+};
+
 /************************************/
 /**      CURRENT COLORSCHEME        */
 /************************************/
-const ColorScheme CurrentColorScheme = DoomOne;
+const ColorScheme CurrentColorScheme = MatchaDark;
 
