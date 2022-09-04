@@ -25,7 +25,7 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
 	[SchemeSel]  = { CurrentColorScheme.Select.Foreground, CurrentColorScheme.Select.Background, CurrentColorScheme.Select.Border },
-	[SchemeHid]  = { CurrentColorScheme.Hide.Foreground, CurrentColorScheme.Hide.Background, CurrentColorScheme.Hide.Border },
+	[SchemeHid]  = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
 }; /* stuff */
 
 /* tagging */
