@@ -76,7 +76,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenuprompt[] = "dmenu run:"; /* prompt to be displayed before input area */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", CurrentColorScheme.Normal.Background, "-nf", CurrentColorScheme.Normal.Foreground, "-sb", CurrentColorScheme.Select.Background, "-sf", CurrentColorScheme.Select.Foreground, "-p", dmenuprompt ,NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", CurrentColorScheme.Normal.Background, "-nf", CurrentColorScheme.Normal.Foreground, "-sb", CurrentColorScheme.Select.Background, "-sf", CurrentColorScheme.Select.Foreground, "-p", dmenuprompt ,NULL };
 
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", "-t", "Simple Terminal", NULL };
