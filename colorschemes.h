@@ -90,7 +90,7 @@ const ColorScheme MatchaDark = {
     },
     .TagNormal = {
         .Background = "#141a1b",
-        .Foreground = "#16a085",
+        .Foreground = "#6c8782",
         .Border = "#141a1b",
     },
     .TagSelect = {
