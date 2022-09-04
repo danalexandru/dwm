@@ -68,7 +68,7 @@ const ColorScheme MatchaDark = {
     },
     .Hide = {
         .Background = "#141a1b",
-        .Foreground = "#6c8782",
+        .Foreground = "#16a085",
         .Border = "#141a1b",
     }
 };
