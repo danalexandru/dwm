@@ -21,17 +21,6 @@ static const char *fonts[]          = {
 #define ICONSPACING 5 /* space between icon and title */
 
 static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14:style=Bold";
-// background color
-static const char col_gray1[]       = "#1F2833";
-// inactive window border color
-static const char col_gray2[]       = "#14191F";
-// font color
-static const char col_gray3[]       = "#F3F3F6";
-// current tag and current window font color
-static const char col_gray4[]       = "#8C92AC";
-// Top bar second color (blue) and active window border color
-// static const char col_cyan[]        = "#E7C547";
-static const char col_cyan[]        = "#0087ff";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
@@ -83,7 +72,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static char dmenuprompt[] = "dmenu run:"; /* prompt to be displayed before input area */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray4, "-sb", col_gray1, "-sf", col_gray3, "-p", dmenuprompt ,NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", CurrentColorScheme.Normal.Background, "-nf", CurrentColorScheme.Normal.Foreground, "-sb", CurrentColorScheme.Select.Background, "-sf", CurrentColorScheme.Select.Foreground, "-p", dmenuprompt ,NULL };
+
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", "-t", "Simple Terminal", NULL };
 
