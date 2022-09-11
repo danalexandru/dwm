@@ -14,7 +14,8 @@ static const int horizpadbar        = 5;        /* horizontal padding for status
 static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 static const char *fonts[]          = {
     "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
-    "JoyPixels:pixelsize=14:antialias=true:autohint=true"
+    "Symbola:pixelsize=17:antialias=true:autohint=true", // Unicode
+    /* "JoyPixels:pixelsize=14:antialias=true:autohint=true" */
 };
 
 #define ICONSIZE 16   /* icon size */
