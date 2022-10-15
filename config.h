@@ -21,7 +21,8 @@ static const char *fonts[]          = {
 #define ICONSIZE 16   /* icon size */
 #define ICONSPACING 5 /* space between icon and title */
 
-static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14:style=Bold";
+/* static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14:style=Bold"; */
+static const char dmenufont[]       = "Hack Nerd Font:pixelsize=14";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
@@ -89,8 +90,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
+	/* { MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } }, */
+	/* { MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } }, */
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ ALTKEY|ShiftMask,             XK_Tab,    inplacerotate,  {.i = +2} },
 	{ ALTKEY,                       XK_Tab,    inplacerotate,  {.i = -2} },
