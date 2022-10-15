@@ -60,17 +60,35 @@ const ColorScheme MatchaDark = {
 const ColorScheme Gruvbox = {
     .Normal = {
         .Background = "#282828",
-        .Foreground = "#ebdbb2",
+        /* .Foreground = "#ebdbb2", */
+        .Foreground = "#a89984",
         .Border = "#282828",
     },
     .Select = {
         .Background = "#3c3836",
-        .Foreground = "#fabd2f",
-        .Border = "#fabd2f",
+        /* .Foreground = "#ffaf00", */
+        .Foreground = "#ebdbb2",
+        .Border = "#ffaf00",
     }
 };
+
+const ColorScheme GruvboxMaterial = {
+    .Normal = {
+        .Background = "#282828",
+        .Foreground = "#a89984",
+        .Border = "#282828",
+    },
+    .Select = {
+        /* .Background = "#3c3836", */
+        .Background = "#d78700",
+        /* .Foreground = "#d78700", */
+        .Foreground = "#FFFFFF",
+        .Border = "#d78700",
+    }
+};
+
 /************************************/
 /**      CURRENT COLORSCHEME        */
 /************************************/
-const ColorScheme CurrentColorScheme = Gruvbox;
+const ColorScheme CurrentColorScheme = DoomOne;
 
