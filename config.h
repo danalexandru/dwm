@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	{ "firefox",  NULL,       NULL,       0,            0,           -1,        0  },
 	{ "Galculator", NULL,     NULL,       0,            1,           -1,        0  },
     { "firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1,        0  },
+    { NULL, NULL, "Picture in picture", 0,    1,           -1,        0  },
 	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
 };
 
@@ -123,6 +124,7 @@ static Key keys[] = {
     // Run Programs
     { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
     { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
