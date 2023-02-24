@@ -125,9 +125,15 @@ static Key keys[] = {
     //	{ MODKEY,                       XK_h,      hide,           {0} },
     //
     // Run Programs
+<<<<<<< HEAD
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
     { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run brave") },
+=======
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
+    { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
+    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
+>>>>>>> ec7235a (Added floating exception for brave picture-in-picture)
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("prime-run pcmanfm") },
