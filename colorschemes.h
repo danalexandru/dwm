@@ -87,8 +87,23 @@ const ColorScheme GruvboxMaterial = {
     }
 };
 
+const ColorScheme Ayu = {
+    .Normal = {
+        .Background = "#0A0B11",
+        .Foreground = "#5C6773",
+        /* .Foreground = "#F29718", */
+        .Border = "#0A0B11",
+    },
+    .Select = {
+        .Background = "#212733",
+        .Foreground = "#F3F3F6",
+        /* .Foreground = "#0A0B11", */
+        .Border = "#E7C547",
+    }
+};
+
 /************************************/
 /**      CURRENT COLORSCHEME        */
 /************************************/
-const ColorScheme CurrentColorScheme = DoomOne;
+const ColorScheme CurrentColorScheme = Ayu;
 
