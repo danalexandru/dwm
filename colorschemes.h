@@ -60,14 +60,12 @@ const ColorScheme MatchaDark = {
 const ColorScheme Gruvbox = {
     .Normal = {
         .Background = "#282828",
-        /* .Foreground = "#ebdbb2", */
-        .Foreground = "#a89984",
+        .Foreground = "#ffaf00",
         .Border = "#282828",
     },
     .Select = {
-        .Background = "#3c3836",
-        /* .Foreground = "#ffaf00", */
-        .Foreground = "#ebdbb2",
+        .Background = "#ffaf00",
+        .Foreground = "#282828",
         .Border = "#ffaf00",
     }
 };
@@ -105,5 +103,5 @@ const ColorScheme Ayu = {
 /************************************/
 /**      CURRENT COLORSCHEME        */
 /************************************/
-const ColorScheme CurrentColorScheme = Ayu;
+const ColorScheme CurrentColorScheme = Gruvbox;
 
