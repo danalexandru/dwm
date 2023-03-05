@@ -142,7 +142,10 @@ static Key keys[] = {
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
     { ControlMask|ShiftMask,        XK_b,      spawn,          SHCMD(". ~/.config/scripts/bluetooth_headphones.sh") },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-kill-process.sh --gruvbox") },
+<<<<<<< HEAD
 	{ ALTKEY|ControlMask,           XK_space,  spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-emoji.sh --gruvbox") },
+=======
+>>>>>>> 0c7c47f (Added brave pip & gimp-qt as floating apps + changed gruvbox theme)
 
     // Tags
 	TAGKEYS(                        XK_1,                      0)
