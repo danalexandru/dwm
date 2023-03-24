@@ -70,6 +70,19 @@ const ColorScheme Gruvbox = {
     }
 };
 
+const ColorScheme Gruvbox2 = {
+    .Normal = {
+        .Background = "#282828",
+        .Foreground = "#ebdbb2",
+        .Border = "#282828",
+    },
+    .Select = {
+        .Background = "#1d2021",
+        .Foreground = "#ffaf00",
+        .Border = "#ffaf00",
+    }
+};
+
 const ColorScheme GruvboxMaterial = {
     .Normal = {
         .Background = "#282828",
@@ -103,5 +116,5 @@ const ColorScheme Ayu = {
 /************************************/
 /**      CURRENT COLORSCHEME        */
 /************************************/
-const ColorScheme CurrentColorScheme = Gruvbox;
+const ColorScheme CurrentColorScheme = Gruvbox2;
 

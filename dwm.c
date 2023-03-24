@@ -62,7 +62,7 @@
 
 /* enums */
 enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
-enum { SchemeNorm, SchemeSel, SchemeHid }; /* color schemes */
+enum { SchemeNorm, SchemeSel, SchemeStatus, SchemeTagsSel, SchemeTagsNorm, SchemeInfoSel, SchemeInfoNorm, SchemeHid }; /* color schemes */
 enum { NetSupported, NetWMName, NetWMIcon, NetWMState, NetWMCheck,
        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
@@ -772,7 +772,7 @@ drawbar(Monitor *m)
 
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon || 1) { /* status is drawn on all monitors */
-		drw_setscheme(drw, scheme[SchemeNorm]);
+		drw_setscheme(drw, scheme[SchemeStatus]);
         tw = TEXTW(stext);
         drw_text(drw, m->ww - tw, 0, tw, bh, lrpad / 2, stext, 0);
 	}
@@ -787,7 +787,7 @@ drawbar(Monitor *m)
 	x = 0;
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(tags[i]);
-		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
+		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeTagsSel : SchemeTagsNorm]);
 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
 		if (occ & 1 << i)
 			drw_rect(drw, x + boxw, 0, w - ( 2 * boxw + 1), boxw,
@@ -797,7 +797,7 @@ drawbar(Monitor *m)
 		x += w;
 	}
 	w = TEXTW(m->ltsymbol);
-	drw_setscheme(drw, scheme[SchemeNorm]);
+	drw_setscheme(drw, scheme[SchemeTagsNorm]);
 	x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
 
 	if ((w = m->ww - tw - x) > bh) {
@@ -808,11 +808,11 @@ drawbar(Monitor *m)
 				if (!ISVISIBLE(c))
 					continue;
 				if (m->sel == c)
-					scm = SchemeSel;
+					scm = SchemeInfoSel;
 				else if (HIDDEN(c))
 					scm = SchemeHid;
 				else
-					scm = SchemeNorm;
+					scm = SchemeInfoNorm;
 				drw_setscheme(drw, scheme[scm]);
 
 				if (remainder >= 0) {
@@ -827,7 +827,7 @@ drawbar(Monitor *m)
 				x += tabw;
 			}
 		} else {
-			drw_setscheme(drw, scheme[SchemeNorm]);
+			drw_setscheme(drw, scheme[SchemeInfoNorm]);
             drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1);
 		}
 	}
