@@ -28,10 +28,10 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
 	[SchemeSel]  = { CurrentColorScheme.Select.Foreground, CurrentColorScheme.Select.Background, CurrentColorScheme.Select.Border },
 	[SchemeHid]  = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
-	[SchemeTagsNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
-	[SchemeTagsSel]  = { CurrentColorScheme.Normal.Border, CurrentColorScheme.Select.Border, CurrentColorScheme.Select.Border },
+	[SchemeTagsNorm] = { CurrentColorScheme.TagNormal.Foreground, CurrentColorScheme.TagNormal.Background, CurrentColorScheme.TagNormal.Border },
+	[SchemeTagsSel]  = { CurrentColorScheme.TagSelect.Foreground, CurrentColorScheme.TagSelect.Background, CurrentColorScheme.TagSelect.Border },
 	[SchemeInfoNorm] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
-	[SchemeStatus] = { CurrentColorScheme.Normal.Foreground, CurrentColorScheme.Normal.Background, CurrentColorScheme.Normal.Border },
+	[SchemeStatus] = { CurrentColorScheme.StatusNormal.Foreground, CurrentColorScheme.StatusNormal.Background, CurrentColorScheme.StatusNormal.Border },
 	[SchemeInfoSel]  = { CurrentColorScheme.Select.Foreground, CurrentColorScheme.Select.Background, CurrentColorScheme.Select.Border },
 }; /* stuff */
 
