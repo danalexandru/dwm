@@ -130,15 +130,9 @@ static Key keys[] = {
     //	{ MODKEY,                       XK_h,      hide,           {0} },
     //
     // Run Programs
-<<<<<<< HEAD
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
     { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run brave") },
-=======
-    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
-    { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
-    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
->>>>>>> ec7235a (Added floating exception for brave picture-in-picture)
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("prime-run pcmanfm") },
@@ -147,10 +141,7 @@ static Key keys[] = {
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
     { ControlMask|ShiftMask,        XK_b,      spawn,          SHCMD(". ~/.config/scripts/bluetooth_headphones.sh") },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-kill-process.sh --gruvbox") },
-<<<<<<< HEAD
 	{ ALTKEY|ControlMask,           XK_space,  spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-emoji.sh --gruvbox") },
-=======
->>>>>>> 0c7c47f (Added brave pip & gimp-qt as floating apps + changed gruvbox theme)
 
     // Tags
 	TAGKEYS(                        XK_1,                      0)
