@@ -128,9 +128,9 @@ static Key keys[] = {
 //	{ MODKEY,                       XK_s,      show,           {0} },
 //	{ MODKEY,                       XK_h,      hide,           {0} },
     // Run Programs
-    { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") },
-    { MODKEY,                       XK_w,      spawn,          SHCMD("brave") },
-    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
+    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
+    /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("brave") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
@@ -139,6 +139,7 @@ static Key keys[] = {
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
     { ControlMask|ShiftMask,        XK_b,      spawn,          SHCMD(". ~/.config/scripts/bluetooth_headphones.sh") },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-kill-process.sh --gruvbox") },
+	{ ALTKEY|ControlMask,           XK_space,  spawn,          SHCMD("~/.config/scripts/dmenu/dmenu-emoji.sh --gruvbox") },
 
     // Tags
 	TAGKEYS(                        XK_1,                      0)

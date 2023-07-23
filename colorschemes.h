@@ -66,7 +66,7 @@ const ColorScheme DoomOne = {
         .Border = "#14191F",
     },
     .TagSelect = {
-        .Background = "#1F2833",
+        .Background = "#0087ff",
         .Foreground = "#F3F3F6",
         .Border = "#0087ff",
     },
@@ -136,17 +136,17 @@ const ColorScheme Gruvbox = {
 const ColorScheme Ayu = {
     .Normal = {
         .Background = "#0A0B11",
-        .Foreground = "#5C6773",
+        .Foreground = "#F3F3F6",
         .Border = "#0A0B11",
     },
     .Select = {
         .Background = "#212733",
-        .Foreground = "#F3F3F6",
+        .Foreground = "#E7C547",
         .Border = "#E7C547",
     },
     .TagNormal = {
         .Background = "#0A0B11",
-        .Foreground = "#5C6773",
+        .Foreground = "#F3F3F6",
         .Border = "#0A0B11",
     },
     .TagSelect = {
@@ -156,7 +156,7 @@ const ColorScheme Ayu = {
     },
     .StatusNormal = {
         .Background = "#0A0B11",
-        .Foreground = "#5C6773",
+        .Foreground = "#F3F3F6",
         .Border = "#0A0B11",
     },
 };
@@ -164,11 +164,11 @@ const ColorScheme Ayu = {
 const ColorScheme SweetDark = {
     .Normal = {
         .Background = "#161925",
-        .Foreground = "#F3F3F6",
+        .Foreground = "#bbbbbb",
         .Border = "#161925",
     },
     .Select = {
-        .Background = "#c50ed2",
+        .Background = "#0c0e14",
         .Foreground = "#F3F3F6",
         .Border = "#c50ed2",
     },
@@ -184,8 +184,64 @@ const ColorScheme SweetDark = {
     },
     .StatusNormal = {
         .Background = "#161925",
-        .Foreground = "#F3F3F6",
+        .Foreground = "#bbbbbb",
         .Border = "#161925",
+    },
+};
+
+const ColorScheme Dracula = {
+    .Normal = {
+        .Background = "#282a36",
+        .Foreground = "#f8f8f2",
+        .Border = "#282a36",
+    },
+    .Select = {
+        .Background = "#1e1f29",
+        .Foreground = "#ff79c6",
+        .Border = "#ff79c6",
+    },
+    .TagNormal = {
+        .Background = "#282a36",
+        .Foreground = "#f8f8f2",
+        .Border = "#282a36",
+    },
+    .TagSelect = {
+        .Background = "#ff79c6",
+        .Foreground = "#000000",
+        .Border = "#ff79c6",
+    },
+    .StatusNormal = {
+        .Background = "#282a36",
+        .Foreground = "#f8f8f2",
+        .Border = "#282a36",
+    },
+};
+
+const ColorScheme BreezeDark = {
+    .Normal = {
+        .Background = "#2a2e32",
+        .Foreground = "#eff0f1",
+        .Border = "#2a2e32",
+    },
+    .Select = {
+        .Background = "#1b1e20",
+        .Foreground = "#eff0f1",
+        .Border = "#3daee9",
+    },
+    .TagNormal = {
+        .Background = "#2a2e32",
+        .Foreground = "#eff0f1",
+        .Border = "#2a2e32",
+    },
+    .TagSelect = {
+        .Background = "#3daee9",
+        .Foreground = "#eff0f1",
+        .Border = "#3daee9",
+    },
+    .StatusNormal = {
+        .Background = "#2a2e32",
+        .Foreground = "#eff0f1",
+        .Border = "#2a2e32",
     },
 };
 
