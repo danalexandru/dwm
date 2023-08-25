@@ -140,8 +140,8 @@ const ColorScheme Ayu = {
         .Border = "#0A0B11",
     },
     .Select = {
-        .Background = "#212733",
-        .Foreground = "#E7C547",
+        .Background = "#1c1e29",
+        .Foreground = "#FFBF00",
         .Border = "#E7C547",
     },
     .TagNormal = {

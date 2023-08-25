@@ -3,8 +3,8 @@
 #include "colorschemes.h"
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 7;        /* gap pixel between windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int gappx     = 5;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -14,8 +14,8 @@ static const int horizpadbar        = 5;        /* horizontal padding for status
 static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 static const char *fonts[]          = {
     "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
-    "Symbola:pixelsize=17:antialias=true:autohint=true", // Unicode
-    /* "JoyPixels:pixelsize=14:antialias=true:autohint=true" */
+    /* "Symbola:pixelsize=17:antialias=true:autohint=true", // Unicode */
+    "JoyPixels:pixelsize=14:antialias=true:autohint=true"
 };
 
 #define ICONSIZE 16   /* icon size */
@@ -49,8 +49,9 @@ static const Rule rules[] = {
 	{ "Galculator", NULL,     NULL,       0,            1,           -1,        0  },
     { "firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1,        0  },
     { NULL, NULL, "Picture in picture",   0,            1,           -1,        0  },
-    { "gmic_qt", "gmic_qt", NULL,         0,            1,          -1,         0  },
+    { "gmic_qt", "gmic_qt", NULL,         0,            1,           -1,         0  },
 	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
+	/* { "PacketTracer", "PacketTracer",   NULL,   0,      1,           -1,       's' }, */
 };
 
 /* layout(s) */
@@ -112,6 +113,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
