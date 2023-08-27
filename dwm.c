@@ -803,7 +803,7 @@ drawbar(Monitor *m)
 
 	if ((w = m->ww - tw - x) > bh) {
 		if (n > 0) {
-			int remainder = w % n;
+			int remainder = (w - 2 * sp)% n;
 			int tabw = (1.0 / (double)n) * w + 1;
 			for (c = m->clients; c; c = c->next) {
 				if (!ISVISIBLE(c))
@@ -829,7 +829,9 @@ drawbar(Monitor *m)
 			}
 		} else {
 			drw_setscheme(drw, scheme[SchemeInfoNorm]);
-            drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1);
+            /* drw_rect(drw, x, 0, w - 2 * sp, bh, 1, 1); */
+            /* important: sp should be taken into consideration, but somehow this works better idk */
+            drw_rect(drw, x, 0, w, bh, 1, 1);
 		}
 	}
 
