@@ -2,6 +2,8 @@
 
 #include "colorschemes.h"
 
+#define SESSION_FILE "/tmp/dwm-session"
+
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gap pixel between windows */
@@ -132,10 +134,10 @@ static Key keys[] = {
     // Run Programs
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
-    { ALTKEY,                       XK_w,      spawn,          SHCMD("brave") },
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run brave") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
-    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
+    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("prime-run pcmanfm") },
 
     // Run Scripts
     { ALTKEY|ControlMask,           XK_t,      spawn,          SHCMD(". ~/.config/scripts/toggle-transparency.sh") },
