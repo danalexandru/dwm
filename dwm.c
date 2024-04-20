@@ -1876,6 +1876,9 @@ setup(void)
 	signal(SIGHUP, sighup);
 	signal(SIGTERM, sigterm);
 
+	signal(SIGHUP, sighup);
+	signal(SIGTERM, sigterm);
+
 	/* init screen */
 	screen = DefaultScreen(dpy);
 	sw = DisplayWidth(dpy, screen);
@@ -2040,7 +2043,6 @@ spawn(const Arg *arg)
 		die("dwm: execvp '%s' failed:", ((char **)arg->v)[0]);
 	}
 }
-
 
 void spawnscratch(const Arg *arg)
 {
