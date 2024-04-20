@@ -249,4 +249,3 @@ const ColorScheme BreezeDark = {
 /**      CURRENT COLORSCHEME        */
 /************************************/
 const ColorScheme CurrentColorScheme = Gruvbox;
-
