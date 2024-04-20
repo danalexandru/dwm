@@ -12,7 +12,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 5;       /* vertical padding of bar */
 static const int sidepad            = 5;       /* horizontal padding of bar */
-static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
+static const int horizpadbar        = 0;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 10;        /* vertical padding for statusbar */
 static const char *fonts[]          = {
     "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true",
@@ -92,7 +92,7 @@ static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'",
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", "-G", "800xX600", NULL};
 
 static Key keys[] = {
-    /* modifier                     key        function        argument */
+	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
@@ -129,9 +129,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,   rotatetags,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,  rotatetags,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-    //	{ MODKEY,                       XK_s,      show,           {0} },
-    //	{ MODKEY,                       XK_h,      hide,           {0} },
-    //
+//	{ MODKEY,                       XK_s,      show,           {0} },
+//	{ MODKEY,                       XK_h,      hide,           {0} },
     // Run Programs
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
@@ -156,7 +155,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-    { ALTKEY,                       XK_F4,      quit,          {0} },
+	{ ALTKEY,                       XK_F4,      quit,          {0} },
     { MODKEY|ControlMask,           XK_r,       quit,          {1} },
 
     // Sound
@@ -171,6 +170,7 @@ static Key keys[] = {
     // Shutdown PC
     { ALTKEY,                      XK_Escape,     spawn,          SHCMD("pkill -9 dwm && shutdown now")},
     { ALTKEY|ControlMask,          XK_Escape,     spawn,          SHCMD("pkill -9 dwm && reboot")}
+
 };
 
 /* button definitions */
@@ -190,4 +190,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
