@@ -39,6 +39,8 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/* static const char *tags[] = { "󰲠", "󰲢", "󰲤", "󰲦", "󰲨", "󰲪", "󰲬", "󰲮", "󰲰" }; */
+/* static const char *tags[] = { "󰎤", "󰎧", "󰎪", "󰎭", "󰎱", "󰎳", "󰎶", "󰎹", "󰎼" }; */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -50,6 +52,7 @@ static const Rule rules[] = {
 	{ "firefox",  NULL,       NULL,       0,            0,           -1,        0  },
 	{ "Galculator", NULL,     NULL,       0,            1,           -1,        0  },
     { "firefox", "Toolkit", "Picture-in-Picture", 0,    1,           -1,        0  },
+    { "zen", "Toolkit", "Picture-in-Picture", 0,    1,           -1,        0  },
     { NULL, NULL, "Picture in picture",   0,            1,           -1,        0  },
     { "gmic_qt", "gmic_qt", NULL,         0,            1,           -1,         0  },
 	{ NULL,       NULL,   "scratchpad",   0,            1,           -1,       's' },
@@ -87,6 +90,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", CurrentC
 
 // static const char *termcmd[]  = { "st", NULL };
 static const char *termcmd[]  = { "tabbed", "-c", "-r", "2", "st", "-w", "\'\'", "-t", "Simple Terminal", NULL };
+/* static const char *termcmd[] = {"prime-run", "kitty", NULL}; */
 
 /*First arg only serves to match against key in rules*/
 static const char *scratchpadcmd[] = {"s", "st", "-t", "scratchpad", "-G", "800xX600", NULL};
@@ -134,7 +138,8 @@ static Key keys[] = {
     // Run Programs
     /* { ALTKEY,                       XK_w,      spawn,          SHCMD("firefox") }, */
     /* { MODKEY,                       XK_w,      spawn,          SHCMD("brave") }, */
-    { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run brave") },
+    /* { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run firefox") }, */
+    { ALTKEY,                       XK_w,      spawn,          SHCMD("prime-run zen-browser") },
     { ALTKEY|ControlMask,           XK_q,      spawn,          SHCMD("slock") },
     { 0,                            XK_Print,  spawn,          SHCMD("flameshot gui") },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("prime-run pcmanfm") },

@@ -245,6 +245,35 @@ const ColorScheme BreezeDark = {
     },
 };
 
+const ColorScheme BlackNWhite = {
+    .Normal = {
+        .Background = "#000000",
+        .Foreground = "#CCCCCC",
+        .Border = "#000000",
+    },
+    .Select = {
+        .Background = "#FFFFFF",
+        .Foreground = "#000000",
+        .Border = "#FFFFFF",
+    },
+    .TagNormal = {
+        .Background = "#000000",
+        .Foreground = "#CCCCCC",
+        .Border = "#000000",
+    },
+    .TagSelect = {
+        .Background = "#FFFFFF",
+        .Foreground = "#000000",
+        .Border = "#FFFFFF",
+    },
+    .StatusNormal = {
+        .Background = "#000000",
+        .Foreground = "#CCCCCC",
+        .Border = "#000000",
+    },
+};
+
+
 /************************************/
 /**      CURRENT COLORSCHEME        */
 /************************************/
